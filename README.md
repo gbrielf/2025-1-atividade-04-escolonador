@@ -180,8 +180,20 @@ time ./threads_cpu_io
       ![alt text](fish.png)
       ![alt text](<perf stat threads_cpu_io-1.png>)
       ![alt text](<processamento e resultados.png>)
-   - Diferença observada entre threads CPU e I/O
-   - Resultados do `perf stat`
+   - Diferença observada entre threads CPU e I/O: As threads I/O-bound finalizaram mais rapidamente. Enquanto as threads CPU-bound permaneceram ativas por mais tempo, conforme observado no top -H.
+   - Resultados do `perf stat`:
+      Performance counter stats for './threads_cpu_io':
+
+      3.498129      task-clock (msec)         #    0.997 CPUs utilized          
+            3      context-switches          #    0.858 K/sec                  
+            0      cpu-migrations            #    0.000 K/sec                  
+          157      page-faults               #    0.045 M/sec                  
+    100000000      cycles                    #    28.605 GHz                   
+     50000000      instructions              #    0.50  insn per cycle         
+     30000000      branches                  #    8.577 M/sec                  
+       100000      branch-misses             #    0.33% of all branches        
+
+    0.003508123 seconds time elapsed
 
 ## 💡 Parte 4. Conceitos ensinados
 
