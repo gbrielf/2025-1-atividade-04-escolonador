@@ -7,8 +7,7 @@
 - **Público alvo**: alunos da disciplina de SO (Sistemas Operacionais) do curso de TADS (Superior em Tecnologia em Análise e Desenvolvimento de Sistemas) no CNAT-IFRN (Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte - Campus Natal-Central).
 - disciplina: **SO** [Sistemas Operacionais](https://github.com/sistemas-operacionais/)
 - professor: [Leonardo A. Minora](https://github.com/leonardo-minora)
-- aluno: FIXME
-
+- aluno: [Gabriel Henrique Furtado Barbosa](https://github.com/gbrielf)
 ## Sumário
 
 1. Pré-requisitos para a tarefa
@@ -165,16 +164,22 @@ time ./threads_cpu_io
 **Tarefas**:
 
 1. **Modifique o programa** para:
-   - Adicionar mais 1 thread de cada tipo
-   - Alterar o cálculo na CPU-bound (ex: cálculo de π)
+   - Adicionar mais 1 thread de cada tipo (Foram incluídas 2 threads CPU-bound e 2 threads I/O-bound.)   
+   - Alterar o cálculo na CPU-bound (ex: cálculo de π) (O cálculo foi ajustado para usar uma série de Leibniz com mais iterações para gerar maior carga computacional.)
 
 5. **Compare os tempos** de execução com:
    ```bash
    perf stat ./threads_cpu_io
    ```
+   Resultado conforme esperado, pois a execução direta não funcionou, mas será obtido futuramente com o binário presente.
+   
+   ![alt text](<perf stat threads_cpu_io.png>)
 
 6. **Relatório** deve incluir:
-   - Prints das saídas (execução e monitoramento)
+   - Prints das saídas:
+      ![alt text](fish.png)
+      ![alt text](<perf stat threads_cpu_io-1.png>)
+      ![alt text](<processamento e resultados.png>)
    - Diferença observada entre threads CPU e I/O
    - Resultados do `perf stat`
 
